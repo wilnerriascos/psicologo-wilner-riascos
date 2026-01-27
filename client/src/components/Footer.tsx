@@ -43,16 +43,16 @@ export default function Footer() {
             <h4 className="font-semibold mb-4">{t('footer.contact')}</h4>
             <ul className="space-y-2 text-primary-foreground/80 text-sm">
               <li className="flex items-center gap-2">
-                <span>📍</span>
-                <span>[Tu dirección]</span>
-              </li>
-              <li className="flex items-center gap-2">
                 <span>📞</span>
-                <span>[Tu teléfono]</span>
+                <a href="tel:+5511966047554" className="hover:text-primary-foreground transition-colors">
+                  +55 (11) 96604-7554
+                </a>
               </li>
               <li className="flex items-center gap-2">
                 <span>📧</span>
-                <span>[Tu email]</span>
+                <a href="mailto:wilner.riascos@gmail.com" className="hover:text-primary-foreground transition-colors">
+                  wilner.riascos@gmail.com
+                </a>
               </li>
             </ul>
           </div>
