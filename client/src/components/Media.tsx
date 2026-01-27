@@ -74,44 +74,83 @@ export default function Media() {
             </p>
           </div>
 
-          {/* Spotify Podcast Embed */}
-          <div className="bg-muted rounded-lg p-8 md:p-12 shadow-sm border border-primary/10">
-            <div className="flex flex-col md:flex-row items-center gap-8">
-              {/* Spotify Icon and Info */}
-              <div className="flex-shrink-0 text-center md:text-left">
-                <div className="text-6xl mb-4">🎧</div>
-                <h3 className="text-2xl font-bold text-primary mb-2">
-                  {language === 'es' ? 'Mi Podcast en Spotify' : 'Meu Podcast no Spotify'}
-                </h3>
-                <p className="text-foreground/70 mb-6 max-w-sm">
-                  {language === 'es'
-                    ? 'Escucha mis episodios sobre bienestar emocional, salud mental y crecimiento personal directamente en Spotify.'
-                    : 'Ouça meus episódios sobre bem-estar emocional, saúde mental e crescimento pessoal diretamente no Spotify.'}
-                </p>
-                <Button
-                  className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold gap-2"
-                  onClick={() => window.open('https://open.spotify.com/show/1lsWL9iqGQFOOguhylEbhU?si=6c9cac9c66f24c63', '_blank')}
-                >
-                  <ExternalLink size={18} />
-                  {language === 'es' ? 'Escuchar en Spotify' : 'Ouvir no Spotify'}
-                </Button>
-              </div>
+          {/* Spotify Podcast Embed - Spanish */}
+          {language === 'es' && (
+            <div className="bg-muted rounded-lg p-8 md:p-12 shadow-sm border border-primary/10">
+              <div className="flex flex-col md:flex-row items-center gap-8">
+                {/* Spotify Icon and Info */}
+                <div className="flex-shrink-0 text-center md:text-left">
+                  <div className="text-6xl mb-4">🎧</div>
+                  <h3 className="text-2xl font-bold text-primary mb-2">
+                    Mi Podcast en Spotify
+                  </h3>
+                  <p className="text-foreground/70 mb-6 max-w-sm">
+                    Escucha mis episodios sobre bienestar emocional, salud mental y crecimiento personal directamente en Spotify.
+                  </p>
+                  <Button
+                    className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold gap-2"
+                    onClick={() => window.open('https://open.spotify.com/show/1lsWL9iqGQFOOguhylEbhU?si=6c9cac9c66f24c63', '_blank')}
+                  >
+                    <ExternalLink size={18} />
+                    Escuchar en Spotify
+                  </Button>
+                </div>
 
-              {/* Spotify Embed */}
-              <div className="flex-1 w-full">
-                <iframe
-                  src="https://open.spotify.com/embed/show/1lsWL9iqGQFOOguhylEbhU?utm_source=generator"
-                  width="100%"
-                  height="352"
-                  frameBorder="0"
-                  allowFullScreen={true}
-                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                  loading="lazy"
-                  className="rounded-lg"
-                ></iframe>
+                {/* Spotify Embed */}
+                <div className="flex-1 w-full">
+                  <iframe
+                    src="https://open.spotify.com/embed/show/1lsWL9iqGQFOOguhylEbhU?utm_source=generator"
+                    width="100%"
+                    height="352"
+                    frameBorder="0"
+                    allowFullScreen={true}
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy"
+                    className="rounded-lg"
+                  ></iframe>
+                </div>
               </div>
             </div>
-          </div>
+          )}
+
+          {/* Spotify Podcast Embed - Portuguese */}
+          {language === 'pt' && (
+            <div className="bg-muted rounded-lg p-8 md:p-12 shadow-sm border border-primary/10">
+              <div className="flex flex-col md:flex-row items-center gap-8">
+                {/* Spotify Icon and Info */}
+                <div className="flex-shrink-0 text-center md:text-left">
+                  <div className="text-6xl mb-4">🎧</div>
+                  <h3 className="text-2xl font-bold text-primary mb-2">
+                    Meu Podcast no Spotify
+                  </h3>
+                  <p className="text-foreground/70 mb-6 max-w-sm">
+                    Ouça meus episódios sobre bem-estar emocional, saúde mental e crescimento pessoal diretamente no Spotify.
+                  </p>
+                  <Button
+                    className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold gap-2"
+                    onClick={() => window.open('https://open.spotify.com/show/0NoutJeD2n5cOmN4JJCxVv?si=b00f9de855a9433d', '_blank')}
+                  >
+                    <ExternalLink size={18} />
+                    Ouvir no Spotify
+                  </Button>
+                </div>
+
+                {/* Spotify Embed */}
+                <div className="flex-1 w-full">
+                  <iframe
+                    src="https://open.spotify.com/embed/show/0NoutJeD2n5cOmN4JJCxVv?utm_source=generator"
+                    width="100%"
+                    height="352"
+                    frameBorder="0"
+                    allowFullScreen={true}
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy"
+                    className="rounded-lg"
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          )}
 
           {/* Additional Info */}
           <div className="mt-12 text-center">
