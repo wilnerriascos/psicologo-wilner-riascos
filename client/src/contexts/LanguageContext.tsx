@@ -28,6 +28,8 @@ const translations: Record<Language, Record<string, string>> = {
     'hero.subtitle': 'Psicólogo Profesional',
     'hero.description': 'Acompañamiento profesional en tu camino hacia el bienestar emocional y personal',
     'hero.cta': 'Agendar Cita',
+    'hero.online_service': 'Atendimiento 100% Online',
+    'hero.worldwide': 'Disponible Mundialmente',
 
     // Sobre Mí
     'about.title': 'Sobre Mí',
@@ -101,6 +103,8 @@ const translations: Record<Language, Record<string, string>> = {
     'hero.subtitle': 'Psicólogo Profissional',
     'hero.description': 'Acompanhamento profissional em seu caminho para o bem-estar emocional e pessoal',
     'hero.cta': 'Agendar Consulta',
+    'hero.online_service': 'Atendimento 100% Online',
+    'hero.worldwide': 'Disponível Mundialmente',
 
     // Sobre Mim
     'about.title': 'Sobre Mim',
