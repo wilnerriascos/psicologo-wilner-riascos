@@ -1,25 +1,31 @@
-import { Button } from "@/components/ui/button";
-import { Loader2 } from "lucide-react";
-import { Streamdown } from 'streamdown';
+import Navigation from '@/components/Navigation';
+import Hero from '@/components/Hero';
+import About from '@/components/About';
+import Services from '@/components/Services';
+import Media from '@/components/Media';
+import Publications from '@/components/Publications';
+import Contact from '@/components/Contact';
+import Footer from '@/components/Footer';
 
 /**
- * All content in this page are only for example, replace with your own feature implementation
- * When building pages, remember your instructions in Frontend Best Practices, Design Guide and Common Pitfalls
+ * Diseño: Minimalismo Cálido con Acentos Naturales
+ * Paleta: Verde Oliva (#7A8B6F), Beige (#E8DCC8), Marrón Suave (#9B8B7E)
+ * Tipografía: Playfair Display (títulos), Lato (cuerpo)
+ * Filosofía: Profesionalismo, confianza, calidez y comodidad
  */
 export default function Home() {
-  // If theme is switchable in App.tsx, we can implement theme toggling like this:
-  // const { theme, toggleTheme } = useTheme();
-
   return (
-    <div className="min-h-screen flex flex-col">
-      <main>
-        {/* Example: lucide-react for icons */}
-        <Loader2 className="animate-spin" />
-        Example Page
-        {/* Example: Streamdown for markdown rendering */}
-        <Streamdown>Any **markdown** content</Streamdown>
-        <Button variant="default">Example Button</Button>
+    <div className="min-h-screen flex flex-col bg-background">
+      <Navigation />
+      <main className="flex-1">
+        <Hero />
+        <About />
+        <Services />
+        <Media />
+        <Publications />
+        <Contact />
       </main>
+      <Footer />
     </div>
   );
 }
