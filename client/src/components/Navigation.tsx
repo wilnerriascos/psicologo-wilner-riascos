@@ -13,6 +13,7 @@ export default function Navigation() {
     { key: 'nav.videos', href: '#videos' },
     { key: 'nav.audios', href: '#audios' },
     { key: 'nav.publicaciones', href: '#publicaciones' },
+    { key: 'nav.blog', href: '/blog' },
     { key: 'nav.contacto', href: '#contacto' },
   ];
 
@@ -32,6 +33,12 @@ export default function Navigation() {
                 key={item.key}
                 href={item.href}
                 className="text-foreground hover:text-primary transition-colors duration-300 text-sm font-medium"
+                onClick={(e) => {
+                  if (item.href.startsWith('#')) {
+                    e.preventDefault();
+                    document.getElementById(item.href.substring(1))?.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
               >
                 {t(item.key)}
               </a>
@@ -83,7 +90,12 @@ export default function Navigation() {
                   key={item.key}
                   href={item.href}
                   className="text-foreground hover:text-primary transition-colors duration-300 text-sm font-medium py-2"
-                  onClick={() => setIsOpen(false)}
+                  onClick={() => {
+                    setIsOpen(false);
+                    if (item.href.startsWith('#')) {
+                      document.getElementById(item.href.substring(1))?.scrollIntoView({ behavior: 'smooth' });
+                    }
+                  }}
                 >
                   {t(item.key)}
                 </a>

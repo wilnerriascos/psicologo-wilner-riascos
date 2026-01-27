@@ -20,6 +20,7 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.videos': 'Videos',
     'nav.audios': 'Audios',
     'nav.publicaciones': 'Publicaciones',
+    'nav.blog': 'Blog',
     'nav.contacto': 'Contacto',
 
     // Hero
@@ -75,6 +76,14 @@ const translations: Record<Language, Record<string, string>> = {
     'footer.address': 'Dirección',
     'footer.phone': 'Teléfono',
     'footer.email': 'Correo',
+
+    // Blog
+    'blog.title': 'Blog de Bienestar',
+    'blog.search': 'Buscar articulos...',
+    'blog.categories': 'Categorias',
+    'blog.all': 'Todos',
+    'blog.back': 'Volver al Blog',
+    'blog.relatedArticles': 'Articulos Relacionados',
   },
   pt: {
     // Navegação
@@ -84,6 +93,7 @@ const translations: Record<Language, Record<string, string>> = {
     'nav.videos': 'Vídeos',
     'nav.audios': 'Áudios',
     'nav.publicaciones': 'Publicações',
+    'nav.blog': 'Blog',
     'nav.contacto': 'Contato',
 
     // Hero
@@ -139,6 +149,14 @@ const translations: Record<Language, Record<string, string>> = {
     'footer.address': 'Endereço',
     'footer.phone': 'Telefone',
     'footer.email': 'Email',
+
+    // Blog
+    'blog.title': 'Blog de Bem-estar',
+    'blog.search': 'Procurar artigos...',
+    'blog.categories': 'Categorias',
+    'blog.all': 'Todos',
+    'blog.back': 'Voltar ao Blog',
+    'blog.relatedArticles': 'Artigos Relacionados',
   },
 };
 
