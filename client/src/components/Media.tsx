@@ -25,36 +25,50 @@ export default function Media() {
             </p>
           </div>
 
-          {/* Videos Placeholder */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[1, 2, 3].map((item) => (
-              <Card
-                key={`video-${item}`}
-                className="bg-muted border-0 shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden group"
-              >
-                <div className="aspect-video bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                  <div className="text-center">
-                    <div className="text-4xl mb-2">▶️</div>
-                    <p className="text-sm text-foreground/60">Video {item}</p>
-                  </div>
-                </div>
-                <CardContent className="p-4">
-                  <p className="text-sm text-foreground/70">
-                    {language === 'es' 
-                      ? 'Haz clic para ver el video en YouTube' 
-                      : 'Clique para assistir o vídeo no YouTube'}
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
+          {/* YouTube Channel Section */}
+          <div className="bg-muted rounded-lg p-8 md:p-12 shadow-sm border border-primary/10 mb-8">
+            <div className="flex flex-col md:flex-row items-center gap-8">
+              {/* YouTube Info */}
+              <div className="flex-shrink-0 text-center md:text-left">
+                <div className="text-6xl mb-4">📺</div>
+                <h3 className="text-2xl font-bold text-primary mb-2">
+                  {language === 'es' ? 'Mi Canal de YouTube' : 'Meu Canal do YouTube'}
+                </h3>
+                <p className="text-foreground/70 mb-6 max-w-sm">
+                  {language === 'es'
+                    ? 'Accede a contenido educativo, reflexiones sobre psicología y recursos para tu bienestar emocional.'
+                    : 'Acesse conteúdo educativo, reflexões sobre psicologia e recursos para seu bem-estar emocional.'}
+                </p>
+                <Button
+                  className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold gap-2"
+                  onClick={() => window.open('https://youtube.com/@wilnerriascos?si=Ychexg7S4-zD0sAL', '_blank')}
+                >
+                  <ExternalLink size={18} />
+                  {language === 'es' ? 'Ver Canal' : 'Ver Canal'}
+                </Button>
+              </div>
+
+              {/* YouTube Embed */}
+              <div className="flex-1 w-full">
+                <iframe
+                  width="100%"
+                  height="315"
+                  src="https://www.youtube.com/embed?listType=user_uploads&list=wilnerriascos"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen={true}
+                  className="rounded-lg"
+                ></iframe>
+              </div>
+            </div>
           </div>
 
-          {/* Add Video Button */}
+          {/* Additional Info */}
           <div className="mt-8 text-center">
-            <p className="text-foreground/60 text-sm mb-4">
-              {language === 'es' 
-                ? 'Aquí puedes agregar enlaces a tus videos de YouTube' 
-                : 'Aqui você pode adicionar links para seus vídeos do YouTube'}
+            <p className="text-foreground/60 text-sm">
+              {language === 'es'
+                ? 'Suscríbete a mi canal para recibir notificaciones de nuevos videos'
+                : 'Inscreva-se no meu canal para receber notificações de novos vídeos'}
             </p>
           </div>
         </div>
