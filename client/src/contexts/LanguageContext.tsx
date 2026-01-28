@@ -26,7 +26,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Hero
     'hero.title': 'Wilner Riascos Sánchez',
     'hero.subtitle': 'Psicólogo',
-    'hero.description': 'Acompañamiento profesional en tu camino hacia el bienestar emocional y personal',
+    'hero.description': 'Ayudando a las personas a ser la mejor versión de sí mismas',
     'hero.cta': 'Agendar Cita',
     'hero.online_service': 'Atendimiento 100% Online',
     'hero.worldwide': 'Disponible Mundialmente',
@@ -101,7 +101,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Hero
     'hero.title': 'Wilner Riascos Sánchez',
     'hero.subtitle': 'Psicólogo',
-    'hero.description': 'Acompanhamento profissional em seu caminho para o bem-estar emocional e pessoal',
+    'hero.description': 'Ajudando as pessoas a serem a melhor versão de si mesmas',
     'hero.cta': 'Agendar Consulta',
     'hero.online_service': 'Atendimento 100% Online',
     'hero.worldwide': 'Disponível Mundialmente',

@@ -3,8 +3,13 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Calendar } from 'lucide-react';
+import emailjs from '@emailjs/browser';
+import { toast } from 'sonner';
+
+// Initialize EmailJS with your public key
+emailjs.init('kzHJZrLCPJMWXrjAe');
 
 export default function Contact() {
   const { t } = useLanguage();
@@ -17,7 +22,7 @@ export default function Contact() {
     message: '',
   });
 
-  const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target as HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement;
@@ -27,13 +32,35 @@ export default function Contact() {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically send the data to a backend
-    console.log('Form submitted:', formData);
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
+    setLoading(true);
+
+    try {
+      // Format the date for display
+      const dateObj = new Date(formData.date);
+      const formattedDate = dateObj.toLocaleDateString('es-ES', {
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+      });
+
+      // Send email using EmailJS
+      await emailjs.send('service_wilner_psychology', 'template_appointment_request', {
+        to_email: 'wilner.riascos@gmail.com',
+        client_name: formData.name,
+        client_email: formData.email,
+        client_phone: formData.phone,
+        appointment_date: formattedDate,
+        appointment_time: formData.time,
+        client_message: formData.message || 'Sin mensaje adicional',
+      });
+
+      // Show success message
+      toast.success('¡Cita agendada exitosamente! Te contactaremos pronto para confirmar.');
+
+      // Reset form
       setFormData({
         name: '',
         email: '',
@@ -42,7 +69,12 @@ export default function Contact() {
         time: '',
         message: '',
       });
-    }, 3000);
+    } catch (error) {
+      console.error('Error sending email:', error);
+      toast.error('Hubo un error al enviar tu solicitud. Por favor intenta de nuevo.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   // Generate available times
@@ -90,12 +122,6 @@ export default function Contact() {
         {/* Form Card */}
         <Card className="bg-muted border-0 shadow-sm">
           <CardContent className="p-8">
-            {submitted && (
-              <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg">
-                <p className="text-green-800 font-medium">✓ {t('contact.success')}</p>
-              </div>
-            )}
-
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* Name and Email Row */}
               <div className="grid md:grid-cols-2 gap-6">
@@ -211,9 +237,10 @@ export default function Contact() {
               <Button
                 type="submit"
                 size="lg"
-                className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold py-6 text-lg transition-all duration-300"
+                disabled={loading}
+                className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold py-6 text-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {t('contact.submit')}
+                {loading ? 'Enviando...' : t('contact.submit')}
               </Button>
             </form>
           </CardContent>
@@ -226,7 +253,7 @@ export default function Contact() {
               <div className="text-3xl mb-3">📍</div>
               <h3 className="font-semibold text-foreground mb-2">Ubicación</h3>
               <p className="text-foreground/70 text-sm">
-                [Tu dirección aquí]
+                100% Online
               </p>
             </CardContent>
           </Card>
@@ -236,7 +263,7 @@ export default function Contact() {
               <div className="text-3xl mb-3">📞</div>
               <h3 className="font-semibold text-foreground mb-2">Teléfono</h3>
               <p className="text-foreground/70 text-sm">
-                [Tu teléfono aquí]
+                +55 (11) 96604-7554
               </p>
             </CardContent>
           </Card>
@@ -246,7 +273,7 @@ export default function Contact() {
               <div className="text-3xl mb-3">📧</div>
               <h3 className="font-semibold text-foreground mb-2">Email</h3>
               <p className="text-foreground/70 text-sm">
-                [Tu email aquí]
+                wilner.riascos@gmail.com
               </p>
             </CardContent>
           </Card>
