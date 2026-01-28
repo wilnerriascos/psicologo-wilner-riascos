@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Calendar, Clock, User, ArrowLeft } from 'lucide-react';
 import { useRoute } from 'wouter';
+import SEO from '@/components/SEO';
 
 /**
  * Diseño: Minimalismo Cálido
@@ -47,7 +48,13 @@ export default function BlogPost() {
     .slice(0, 3);
 
   return (
-    <div className="min-h-screen bg-background">
+    <>
+      <SEO
+        title={`${title} | Blog de Wilner Riascos Sánchez`}
+        description={language === 'es' ? post.excerptEs : post.excerptPt}
+        keywords={`${categoryLabel}, psicología, salud mental, bienestar emocional`}
+      />
+      <div className="min-h-screen bg-background">
       {/* Back Button */}
       <div className="bg-white border-b border-border">
         <div className="container mx-auto px-4 max-w-4xl py-4">
@@ -237,5 +244,6 @@ export default function BlogPost() {
         </div>
       </section>
     </div>
+    </>
   );
 }

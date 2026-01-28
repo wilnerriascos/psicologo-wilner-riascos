@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Search, Calendar, Clock } from 'lucide-react';
 import { useRoute } from 'wouter';
+import SEO from '@/components/SEO';
 
 /**
  * Diseño: Minimalismo Cálido
@@ -35,7 +36,13 @@ export default function Blog() {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <>
+      <SEO
+        title="Blog de Psicología | Wilner Riascos Sánchez"
+        description="Lee artículos sobre salud mental, bienestar emocional, ansiedad, depresión, relaciones y más. Consejos profesionales de un psicólogo experimentado."
+        keywords="blog psicología, salud mental, bienestar emocional, ansiedad, depresión, relaciones, autoestima, estrés, sueño"
+      />
+      <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="bg-primary text-primary-foreground py-16">
         <div className="container mx-auto px-4 max-w-6xl">
@@ -190,5 +197,6 @@ export default function Blog() {
         </div>
       </section>
     </div>
+    </>
   );
 }
