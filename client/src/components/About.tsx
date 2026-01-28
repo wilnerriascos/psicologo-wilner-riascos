@@ -22,47 +22,14 @@ export default function About() {
               {t('about.intro')}
             </p>
             <p className="text-lg text-foreground leading-relaxed">
-              {t('about.experience')}
+              {t('about.education')}
             </p>
-
-            {/* Key Points */}
-            <div className="space-y-4 pt-6">
-              <div className="flex gap-4">
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <span className="text-primary font-bold">✓</span>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-foreground mb-1">Experiencia Profesional</h4>
-                  <p className="text-foreground/80 text-sm">
-                    Años de práctica clínica y especialización en diversas áreas
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex gap-4">
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <span className="text-primary font-bold">✓</span>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-foreground mb-1">Enfoque Humanista</h4>
-                  <p className="text-foreground/80 text-sm">
-                    Atención personalizada y compasiva para cada paciente
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex gap-4">
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <span className="text-primary font-bold">✓</span>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-foreground mb-1">Confidencialidad</h4>
-                  <p className="text-foreground/80 text-sm">
-                    Compromiso con la privacidad y ética profesional
-                  </p>
-                </div>
-              </div>
-            </div>
+            <p className="text-lg text-foreground leading-relaxed">
+              {t('about.migration')}
+            </p>
+            <p className="text-lg text-foreground leading-relaxed">
+              {t('about.personal')}
+            </p>
           </div>
 
           {/* Profile Photo */}

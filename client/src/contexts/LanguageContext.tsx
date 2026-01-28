@@ -33,8 +33,10 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Sobre Mí
     'about.title': 'Sobre Mí',
-    'about.intro': 'Soy un psicólogo dedicado a proporcionar atención profesional y compasiva a mis pacientes.',
-    'about.experience': 'Con años de experiencia en psicología clínica, he trabajado con diversos grupos poblacionales y problemas de salud mental.',
+    'about.intro': 'Acompaño a personas que atraviesan preguntas importantes sobre su vida personal, su trabajo y sus decisiones. Mi trabajo como psicólogo se apoya en una formación sólida en salud mental, orientación profesional y de carrera, y psicología del trabajo, siempre desde una mirada comprensiva y situada en la realidad de cada persona.',
+    'about.education': 'Soy psicólogo, con formación de pregrado y maestría en Psicología por la Universidad del Valle (Cali, Colombia), y doctorado en Psicología por la Universidad de São Paulo (Brasil), donde también realicé formación en orientación profesional y de carrera. Además, soy profesor e investigador de la Universidad de San Buenaventura, en Cali, Colombia.',
+    'about.migration': 'Actualmente vivo en São Paulo. La experiencia de migrar me ha permitido comprender de manera cercana los procesos de adaptación, los cambios identitarios y los desafíos emocionales que implica vivir en otro país. Conozco también lo que significa trabajar de forma remota y equilibrar las exigencias laborales con la vida personal y familiar.',
+    'about.personal': 'Soy esposo y padre de familia. Me gusta el fútbol, el cine y diversos ritmos musicales. Creo en una psicología que se ejerce con rigor, pero también con cercanía, y que reconoce a las personas en toda su complejidad, dentro y fuera del espacio terapéutico.',
 
     // Servicios
     'services.title': 'Servicios',
@@ -108,8 +110,10 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Sobre Mim
     'about.title': 'Sobre Mim',
-    'about.intro': 'Sou um psicólogo dedicado a fornecer atendimento profissional e compassivo aos meus pacientes.',
-    'about.experience': 'Com anos de experiência em psicologia clínica, trabalhei com diversos grupos populacionais e problemas de saúde mental.',
+    'about.intro': 'Acompanho pessoas que atravessam perguntas importantes sobre sua vida pessoal, seu trabalho e suas decisões. Meu trabalho como psicólogo se apoia em uma formação sólida em saúde mental, orientação profissional e de carreira, e psicologia do trabalho, sempre a partir de um olhar compreensivo e situado na realidade de cada pessoa.',
+    'about.education': 'Sou psicólogo, com formação de graduação e mestrado em Psicologia pela Universidade do Vale (Cali, Colômbia), e doutorado em Psicologia pela Universidade de São Paulo (Brasil), onde também realizei formação em orientação profissional e de carreira. Além disso, sou professor e pesquisador da Universidade de San Buenaventura, em Cali, Colômbia.',
+    'about.migration': 'Atualmente vivo em São Paulo. A experiência de migrar me permitiu compreender de forma próxima os processos de adaptação, as mudanças identitárias e os desafios emocionais que implica viver em outro país. Conheço também o que significa trabalhar remotamente e equilibrar as exigências laborais com a vida pessoal e familiar.',
+    'about.personal': 'Sou marido e pai de família. Gosto de futebol, cinema e diversos ritmos musicais. Acredito em uma psicologia que se exerce com rigor, mas também com proximidade, e que reconhece as pessoas em toda sua complexidade, dentro e fora do espaço terapêutico.',
 
     // Serviços
     'services.title': 'Serviços',
