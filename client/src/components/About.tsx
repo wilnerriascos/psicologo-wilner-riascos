@@ -65,15 +65,36 @@ export default function About() {
             </div>
           </div>
 
-          {/* Decorative Element */}
+          {/* Profile Photo */}
           <div className="hidden md:flex items-center justify-center">
-            <div className="relative w-64 h-64">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-3xl transform rotate-6"></div>
-              <div className="absolute inset-0 bg-gradient-to-tl from-secondary/20 to-primary/10 rounded-3xl transform -rotate-3 flex items-center justify-center">
-                <div className="text-center text-primary/40">
-                  <div className="text-6xl mb-4">🧠</div>
-                  <p className="text-sm font-semibold">Bienestar Mental</p>
-                </div>
+            <div className="relative">
+              {/* Decorative background circles */}
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full w-80 h-80 blur-2xl"></div>
+              
+              {/* Profile image */}
+              <div className="relative w-72 h-72 rounded-full overflow-hidden border-4 border-primary/20 shadow-2xl">
+                <img
+                  src="/images/wilner-profile.jpg"
+                  alt="Wilner Riascos Sánchez"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+          </div>
+          
+          {/* Mobile Profile Photo */}
+          <div className="md:hidden flex items-center justify-center mb-8">
+            <div className="relative">
+              {/* Decorative background circles */}
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full w-64 h-64 blur-2xl"></div>
+              
+              {/* Profile image */}
+              <div className="relative w-56 h-56 rounded-full overflow-hidden border-4 border-primary/20 shadow-2xl">
+                <img
+                  src="/images/wilner-profile.jpg"
+                  alt="Wilner Riascos Sánchez"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
           </div>

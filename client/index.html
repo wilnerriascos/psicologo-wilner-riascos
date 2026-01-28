@@ -35,6 +35,9 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://psicologo-wilner-riascos.manus.space" />
     
+    <!-- Google Search Console Verification -->
+    <meta name="google-site-verification" content="placeholder-verification-code" />
+    
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -44,6 +47,20 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX', {
+        'page_path': window.location.pathname,
+        'anonymize_ip': true
+      });
+    </script>
+    
+    <!-- Manus Analytics (Umami) -->
     <script
       defer
       src="%VITE_ANALYTICS_ENDPOINT%/umami"
