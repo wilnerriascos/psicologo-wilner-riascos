@@ -51,12 +51,6 @@ export default function Hero() {
                 {t('hero.online_service')}
               </span>
             </div>
-            <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full border border-white/30">
-              <span className="text-2xl">💻</span>
-              <span className="text-white font-medium">
-                {t('hero.worldwide')}
-              </span>
-            </div>
           </div>
 
           {/* CTA Button */}
