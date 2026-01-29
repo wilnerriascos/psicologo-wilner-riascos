@@ -8,8 +8,7 @@ import { Calendar } from 'lucide-react';
 import emailjs from '@emailjs/browser';
 import { toast } from 'sonner';
 
-// Initialize EmailJS with your public key
-emailjs.init('kzHJZrLCPJMWXrjAe');
+
 
 export default function Contact() {
   const { t } = useLanguage();
@@ -32,19 +31,17 @@ export default function Contact() {
     }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+ const handleSubmit = async (e: React.FormEvent) => {
   e.preventDefault();
   setLoading(true);
 
   try {
-      // Format the date for display
-      const dateObj = new Date(formData.date);
-      const formattedDate = dateObj.toLocaleDateString('es-ES', {
-        weekday: 'long',
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric',
-      });
+     import { useLanguage } from '@/contexts/LanguageContext';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { useState, useEffect } from 'react';
 
       // Send email using EmailJS
       await emailjs.send('service_wilner_psychology', 'template_appointment_request', {
