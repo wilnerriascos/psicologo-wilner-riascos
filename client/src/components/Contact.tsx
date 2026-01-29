@@ -33,10 +33,10 @@ export default function Contact() {
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setLoading(true);
+  e.preventDefault();
+  setLoading(true);
 
-    try {
+  try {
       // Format the date for display
       const dateObj = new Date(formData.date);
       const formattedDate = dateObj.toLocaleDateString('es-ES', {
