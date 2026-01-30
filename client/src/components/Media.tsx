@@ -50,15 +50,18 @@ export default function Media() {
 
               {/* YouTube Embed */}
               <div className="flex-1 w-full">
-                <iframe
-                  width="100%"
-                  height="315"
-                  src="https://www.youtube.com/embed?listType=user_uploads&list=wilnerriascos"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen={true}
-                  className="rounded-lg"
-                ></iframe>
+                <div className="bg-black rounded-lg overflow-hidden" style={{ aspectRatio: '16/9' }}>
+                  <iframe
+                    width="100%"
+                    height="100%"
+                    src="https://www.youtube.com/embed?listType=user_uploads&list=UChZDpBVrJ4LBIgCDbzxObaQ"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen={true}
+                    title="Canal de YouTube - Wilner Riascos Sánchez"
+                    className="w-full h-full"
+                  ></iframe>
+                </div>
               </div>
             </div>
           </div>
