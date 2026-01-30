@@ -110,9 +110,9 @@ const translations: Record<Language, Record<string, string>> = {
 
     // Sobre Mim
     'about.title': 'Sobre Mim',
-    'about.intro': 'Acompanho pessoas que atravessam perguntas importantes sobre sua vida pessoal, seu trabalho e suas decisões. Meu trabalho como psicólogo se apoia em uma formação sólida em saúde mental, orientação profissional e de carreira, e psicologia do trabalho, sempre a partir de um olhar compreensivo e situado na realidade de cada pessoa.',
+    'about.intro': 'Acompanho pessoas que atravessam por perguntas importantes sobre sua vida pessoal, seu trabalho e suas decisões. Meu trabalho como psicólogo se apoia em uma formação sólida em saúde mental, orientação profissional e de carreira, e psicologia do trabalho, sempre a partir de um olhar compreensivo e situado na realidade de cada pessoa.',
     'about.education': 'Sou psicólogo, com formação de graduação e mestrado em Psicologia pela Universidade do Vale (Cali, Colômbia), e doutorado em Psicologia pela Universidade de São Paulo (Brasil), onde também realizei formação em orientação profissional e de carreira. Além disso, sou professor e pesquisador da Universidade de San Buenaventura, em Cali, Colômbia.',
-    'about.migration': 'Atualmente vivo em São Paulo. A experiência de migrar me permitiu compreender de forma próxima os processos de adaptação, as mudanças identitárias e os desafios emocionais que implica viver em outro país. Conheço também o que significa trabalhar remotamente e equilibrar as exigências laborais com a vida pessoal e familiar.',
+    'about.migration': 'Atualmente moro em São Paulo. A experiência de migrar me permitiu compreender de forma próxima os processos de adaptação, as mudanças identitárias e os desafios emocionais que implica viver em outro país. Conheço também o que significa trabalhar remotamente e equilibrar as exigências laborais com a vida pessoal e familiar.',
     'about.personal': 'Sou marido e pai de família. Gosto de futebol, cinema e diversos ritmos musicais. Acredito em uma psicologia que se exerce com rigor, mas também com proximidade, e que reconhece as pessoas em toda sua complexidade, dentro e fora do espaço terapêutico.',
 
     // Serviços
