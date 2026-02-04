@@ -1,3 +1,4 @@
+import { useAuth } from '@/_core/hooks/useAuth';
 import Navigation from '@/components/Navigation';
 import Hero from '@/components/Hero';
 import About from '@/components/About';
@@ -16,6 +17,10 @@ import Schema from '@/components/Schema';
  * Filosofía: Profesionalismo, confianza, calidez y comodidad
  */
 export default function Home() {
+  // The userAuth hooks provides authentication state
+  // To implement login/logout functionality, simply call logout() or redirect to getLoginUrl()
+  let { user, loading, error, isAuthenticated, logout } = useAuth();
+
   return (
     <>
       <SEO

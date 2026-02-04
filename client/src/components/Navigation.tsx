@@ -14,6 +14,7 @@ export default function Navigation() {
     { key: 'nav.audios', href: '#audios' },
     { key: 'nav.publicaciones', href: '#publicaciones' },
     { key: 'nav.blog', href: '/blog' },
+    { key: 'nav.archivos', href: '/files' },
     { key: 'nav.contacto', href: '#contacto' },
   ];
 
@@ -37,6 +38,9 @@ export default function Navigation() {
                   if (item.href.startsWith('#')) {
                     e.preventDefault();
                     document.getElementById(item.href.substring(1))?.scrollIntoView({ behavior: 'smooth' });
+                  }
+                  if (item.href === '/files') {
+                    window.location.href = '/files';
                   }
                 }}
               >
@@ -94,6 +98,9 @@ export default function Navigation() {
                     setIsOpen(false);
                     if (item.href.startsWith('#')) {
                       document.getElementById(item.href.substring(1))?.scrollIntoView({ behavior: 'smooth' });
+                    }
+                    if (item.href === '/files') {
+                      window.location.href = '/files';
                     }
                   }}
                 >

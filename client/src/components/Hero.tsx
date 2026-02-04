@@ -13,7 +13,7 @@ export default function Hero() {
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: 'url(/images/hero-background.jpg)',
+          backgroundImage: 'url(https://files.manuscdn.com/user_upload_by_module/session_file/310519663319427028/jKiDXeCvhpIdAqgB.jpg)',
         }}
       >
         {/* Overlay for better text readability */}
