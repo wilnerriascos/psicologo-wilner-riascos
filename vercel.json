@@ -2,11 +2,10 @@
   "buildCommand": "pnpm build",
   "installCommand": "pnpm install",
   "framework": "vite",
-  "outputDirectory": "client/dist",
-  "env": {
-    "NODE_ENV": "production"
  {
+  "outputDirectory": "client/dist",
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
+
